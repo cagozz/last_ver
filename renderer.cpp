@@ -12,7 +12,7 @@ void render(Scene& s)
         for(int w = 0; w < width; w++)
         {
             Ray r = createRay(s.camera, w, h);
-            pixel = color(s, r, s.maxRecDepth, h, w);
+            pixel = color(s, r, s.maxRecDepth);
             pixels.push_back(pixel);
         }
     }
